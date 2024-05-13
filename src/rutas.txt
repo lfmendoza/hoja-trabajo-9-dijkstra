@@ -1,0 +1,21 @@
+"New York", "Los Angeles", 500
+"New York", "Chicago", 300
+"New York", "Houston", 700
+"New York", "Miami", 800
+"New York", "San Francisco", 600
+"Los Angeles", "Chicago", 200
+"Los Angeles", "Houston", 1000
+"Los Angeles", "Miami", 1200
+"Los Angeles", "San Francisco", 400
+"Chicago", "Houston", 600
+"Chicago", "Miami", 900
+"Chicago", "San Francisco", 800
+"Houston", "Miami", 1100
+"Houston", "San Francisco", 1300
+"Miami", "San Francisco", 1400
+"New York", "Seattle", 1100
+"Los Angeles", "Seattle", 900
+"Chicago", "Seattle", 800
+"Houston", "Seattle", 1500
+"Miami", "Seattle", 1600
+"San Francisco", "Seattle", 700
