@@ -1,21 +1,23 @@
 package org.example;
-import java.util.Map;
-import java.util.Scanner;
 
+import java.util.Scanner;
+import java.util.Map;
+
+/**
+ * Esta es la clase principal que ejecuta la aplicación.
+ */
 public class App {
     public static void main(String[] args) {
-        Graph graph = new Graph("src/rutas.txt");
         Scanner scanner = new Scanner(System.in);
+        Grafo grafo = new Grafo();
 
-        System.out.print("Por favor, ingresa la estación de salida: ");
-        String source = scanner.nextLine();
+        System.out.print("Ingrese la estación de salida: ");
+        String estacion = scanner.nextLine();
 
-        Map<String, Integer> destinationsAndCosts = graph.findCheapestCost(source);
+        Dijkstra dijkstra = new Dijkstra(grafo.getGrafo());
+        Map<String, Double> resultados = dijkstra.calcularRutasDesde(estacion);
 
-        System.out.println("Los destinos posibles desde " + source + " y el costo más barato a cada destino son:");
-        for (Map.Entry<String, Integer> entry : destinationsAndCosts.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
+        resultados.forEach((destino, costo) -> System.out.println("Costo a " + destino + ": " + costo));
 
         scanner.close();
     }
